@@ -321,18 +321,16 @@ input[type="number"]:focus {
   transform: translateY(0);
 }
 
-/* Скрытое состояние для раздела с правилами */
 .hidden {
   display: none;
 }
 
-/* Стили для контейнера раздела с правилами */
 #rules-section {
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6); /* затемненный фон */
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -348,7 +346,6 @@ input[type="number"]:focus {
   transition: opacity 0.5s ease, visibility 0s;
 }
 
-/* Стили для контента правил */
 .rules-content {
   background: #fff;
   padding: 2.5rem;
@@ -371,7 +368,6 @@ input[type="number"]:focus {
   }
 }
 
-/* Стили для заголовка и списка */
 #rules-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -389,7 +385,6 @@ input[type="number"]:focus {
   margin: 0.5rem 0;
 }
 
-/* Кнопка закрытия */
 #close-rules-btn {
   margin-top: 1.5rem;
   padding: 1rem 2rem;
@@ -414,7 +409,6 @@ input[type="number"]:focus {
   transform: translateY(0);
 }
 
-/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   #rules-section .rules-content {
     padding: 2rem;
@@ -427,7 +421,6 @@ input[type="number"]:focus {
   }
 }
 
-/* Aдаптивность для маленьких экранов */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -457,7 +450,6 @@ input[type="number"]:focus {
   }
 }
 
-/* Адаптивность для мобильных устройств */
 @media (max-width: 480px) {
   h1 {
     font-size: 2rem;
