@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пятнашка</title>
+  <link rel="icon" href="image/avatar.jpg" type="image/png">
+  <style>
+  </style>
+</head>
+<body>
+  <h1 onclick="goBackToMenu()" style="cursor: pointer;" class="game-title">Пятнашка</h1>
+
+  <div class="menu">
+    <button onclick="selectMode('bot')">Играть с ботом</button>
+    <button onclick="selectMode('local')">Игра вдвоём</button>
+    <!-- Кнопка для открытия правил -->
+<button id="open-rules-btn" class="btn">Правила</button>
+
+<!-- Раздел с правилами, который изначально скрыт -->
+<div id="rules-section" class="hidden">
+  <div class="rules-content">
+    <h2>Правила игры</h2>
+    <p>Цель игры - снять все палочки, следуя правилам. Игроки по очереди удаляют палочки из одного из трех рядов. Игрок может удалить любое количество палочек из одного ряда, но не более 20 палочек за раз.</p>
+    <ul>
+      <li>1. Каждый игрок по очереди удаляет палочки из одного из рядов.</li>
+      <li>2. В один ход можно удалить не более 20 палочек из одного ряда.</li>
+      <li>3. Игроки могут выбирать ряд, в котором они хотят удалить палочки.</li>
+      <li>4. Игра заканчивается, когда все палочки будут сняты.</li>
+      <li>5. Побеждает тот, кто оставит последнюю палочку противнику.</li>
+    </ul>
+    <button id="close-rules-btn" class="btn">Закрыть</button>
+  </div>
+</div>
+
+  </div>
+
+  <div class="form-section" style="display:none">
+    <h2>Количество палочек в рядах</h2>
+    <div><label>Ряд 1:</label><input type="number" id="row1" min="1" value="7"></div>
+    <div><label>Ряд 2:</label><input type="number" id="row2" min="1" value="5"></div>
+    <div><label>Ряд 3:</label><input type="number" id="row3" min="1" value="3"></div>
+    <div id="difficulty-section" style="display:none">
+      <h3>Сложность:</h3>
+      <select id="difficulty">
+        <option value="easy">Легко</option>
+        <option value="medium">Средне</option>
+        <option value="hard">Хардкор</option>
+      </select>
+    </div>
+    <button onclick="startGame()">Начать игру</button>
+    
+  </div>
+
+  <div class="game-section" style="display:none">
+    <h2>Ходит: <span id="current-player">Игрок 1</span> <span id="difficulty-label" style="font-size: 1rem; color: var(--gray); margin-left: 10px;"></span></h2>
+    <div id="game-rows"></div>
+    <button id="confirm-btn" onclick="confirmMove()" disabled>Сделать ход</button>
+    <div class="message" id="game-message"></div>
+    <div class="score" id="score-board">Ход: 0</div>
+    
+  </div>
+
+  <div class="overlay" id="end-overlay">
+    <div class="popup">
+      <h2 id="popup-message"></h2>
+      <div id="move-counter"></div>
+      <button onclick="location.reload()">Начать заново</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    BY DREAD <img src="image/avatar.jpg" alt="Фото">
+  </div>
+
+
+
+  <script>
+
+  </script>
+</body>
+</html>
