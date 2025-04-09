@@ -14,11 +14,9 @@
 
   <div class="menu">
     <button onclick="selectMode('bot')">Играть с ботом</button>
-    <button onclick="selectMode('local')">Игра вдвоём</button>
-    <!-- Кнопка для открытия правил -->
-<button id="open-rules-btn" class="btn">Правила</button>
+    <button onclick="selectMode('local')">Игра вдвоём</button>    
+    <button id="open-rules-btn" class="btn">Правила</button>
 
-<!-- Раздел с правилами, который изначально скрыт -->
 <div id="rules-section" class="hidden">
   <div class="rules-content">
     <h2>Правила игры</h2>
@@ -50,16 +48,14 @@
       </select>
     </div>
     <button onclick="startGame()">Начать игру</button>
-    
   </div>
-
+  
   <div class="game-section" style="display:none">
     <h2>Ходит: <span id="current-player">Игрок 1</span> <span id="difficulty-label" style="font-size: 1rem; color: var(--gray); margin-left: 10px;"></span></h2>
     <div id="game-rows"></div>
     <button id="confirm-btn" onclick="confirmMove()" disabled>Сделать ход</button>
     <div class="message" id="game-message"></div>
     <div class="score" id="score-board">Ход: 0</div>
-    
   </div>
 
   <div class="overlay" id="end-overlay">
