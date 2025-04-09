@@ -148,7 +148,7 @@ function botMove() {
       move = { [row.index]: [row.sticks[0]] };
     }
   } else {
-    // Hard (optimal Nim strategy)
+    
     let xor = rows.reduce((acc, row) => acc ^ row.filter(Boolean).length, 0);
     for (let i = 0; i < rows.length; i++) {
       let count = rows[i].filter(Boolean).length;
@@ -166,7 +166,7 @@ function botMove() {
       }
     }
 
-    // fallback if nothing found
+    
     if (!move) {
       let row = rowOptions[0];
       move = { [row.index]: [row.sticks[0]] };
@@ -190,17 +190,17 @@ function botMove() {
   botThinking = false;
   updateGameView();
 }
-// Получаем элементы
+
 const openRulesBtn = document.getElementById('open-rules-btn');
 const closeRulesBtn = document.getElementById('close-rules-btn');
 const rulesSection = document.getElementById('rules-section');
 
-// Обработчик для кнопки "Правила"
+
 openRulesBtn.addEventListener('click', () => {
   rulesSection.classList.add('active');
 });
 
-// Обработчик для кнопки "Закрыть"
+
 closeRulesBtn.addEventListener('click', () => {
   rulesSection.classList.remove('active');
 });
